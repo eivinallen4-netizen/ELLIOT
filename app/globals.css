@@ -1,26 +1,47 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --basalt: #1a1c20;
+  --basalt-raised: #22252b;
+  --basalt-line: #33363d;
+  --snow: #f5f5f3;
+  --snow-dim: #a8aab0;
+  --orange: #ff6b2c;
+  --orange-dim: #d9551c;
+
+  --background: var(--basalt);
+  --foreground: var(--snow);
 }
 
 @theme inline {
+  --color-basalt: var(--basalt);
+  --color-basalt-raised: var(--basalt-raised);
+  --color-basalt-line: var(--basalt-line);
+  --color-snow: var(--snow);
+  --color-snow-dim: var(--snow-dim);
+  --color-orange: var(--orange);
+  --color-orange-dim: var(--orange-dim);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-oswald);
+  --font-sans: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  color-scheme: dark;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-display), Oswald, sans-serif;
+}
+
+::selection {
+  background: var(--orange);
+  color: var(--basalt);
 }

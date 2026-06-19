@@ -1,0 +1,26 @@
+import SneakPeekVideo from "./SneakPeekVideo";
+
+export default function SneakPeek() {
+  return (
+    <section id="sneak-peek" className="border-b border-basalt-line">
+      <div className="mx-auto max-w-5xl px-6 py-20">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="font-display text-sm font-medium tracking-[0.2em] text-orange">
+            SNEAK PEEK
+          </p>
+          <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-snow sm:text-4xl">
+            Here&apos;s the exact line. Here&apos;s why it works.
+          </h2>
+          <p className="mt-4 text-base text-snow-dim">
+            Here&apos;s me blowing it on a real call — so you don&apos;t.
+            This is one breakdown from inside an actual coaching session.
+          </p>
+        </div>
+
+        <div className="mt-10">
+          <SneakPeekVideo />
+        </div>
+      </div>
+    </section>
+  );
+}
