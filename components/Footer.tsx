@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { IconLinkedIn, IconTikTok, IconX } from "./icons";
 
 const LINKS = [
   { href: "/#for-you", label: "Who It's For" },
@@ -33,34 +32,10 @@ export default function Footer() {
             </a>
           ))}
         </nav>
-
-        <div className="flex gap-4">
-          <a
-            href="#"
-            aria-label="Top Mountaineer on LinkedIn"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-basalt-line text-snow-dim transition-colors hover:border-snow-dim hover:text-snow"
-          >
-            <IconLinkedIn className="h-4 w-4" />
-          </a>
-          <a
-            href="#"
-            aria-label="Top Mountaineer on TikTok"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-basalt-line text-snow-dim transition-colors hover:border-snow-dim hover:text-snow"
-          >
-            <IconTikTok className="h-4 w-4" />
-          </a>
-          <a
-            href="#"
-            aria-label="Top Mountaineer on X"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-basalt-line text-snow-dim transition-colors hover:border-snow-dim hover:text-snow"
-          >
-            <IconX className="h-4 w-4" />
-          </a>
-        </div>
       </div>
       <div className="border-t border-basalt-line px-6 py-6 text-center text-xs text-snow-dim">
-        © {new Date().getFullYear()} Top Mountaineer. We don&apos;t sell
-        scripts — we put a real coach on your real calls, every week.
+        © {new Date().getFullYear()} Top Mountaineer. I don&apos;t sell
+        scripts. I put a real coach on your real calls, every single week.
       </div>
     </footer>
   );

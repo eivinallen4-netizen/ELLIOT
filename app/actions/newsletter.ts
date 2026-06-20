@@ -21,11 +21,11 @@ export async function subscribeAction(
   const email = String(formData.get("email") ?? "").trim();
 
   if (!EMAIL_RE.test(email)) {
-    return { status: "error", message: "Enter a valid email address." };
+    return { status: "error", message: "Enter a real email address." };
   }
 
   await addSubscriber(email);
-  return { status: "success", message: "You're in. Watch your inbox." };
+  return { status: "success", message: "You're in. Watch your inbox — don't make me chase you." };
 }
 
 export type AdminState = {

@@ -83,7 +83,7 @@ export default function ApplyForm() {
 
       <div className="flex flex-col gap-1.5">
         <label htmlFor="obstacle" className="text-xs font-medium text-snow-dim">
-          Where are you stuck right now?
+          Where are you actually stuck right now?
         </label>
         <textarea
           id="obstacle"
@@ -91,7 +91,7 @@ export default function ApplyForm() {
           required
           minLength={10}
           rows={4}
-          placeholder="Ramping and missing quota, plateaued for months, on a PIP, freezing on objections — tell us straight."
+          placeholder="Ramping and missing quota, plateaued for months, on a PIP, freezing the second they push back — give it to me straight."
           className="resize-none rounded-lg border border-basalt-line bg-basalt px-4 py-3 text-sm text-snow placeholder:text-snow-dim/60 focus:border-orange focus:outline-none"
         />
       </div>
@@ -123,7 +123,7 @@ export default function ApplyForm() {
         disabled={pending}
         className="mt-2 rounded-full bg-orange px-7 py-3.5 text-sm font-semibold text-basalt transition-colors hover:bg-orange-dim disabled:opacity-60"
       >
-        {pending ? "Submitting…" : "Submit Application"}
+        {pending ? "Sending…" : "Send My Application"}
       </button>
 
       <p
@@ -133,7 +133,7 @@ export default function ApplyForm() {
         }`}
       >
         {state.message ||
-          "Two minutes to apply. We screen for coachable, not credentialed."}
+          "Two minutes to apply. I screen for coachable, not credentialed — so don't sweat the resume."}
       </p>
     </form>
   );

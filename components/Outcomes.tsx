@@ -1,13 +1,9 @@
+import Link from "next/link";
 import { IconWaveform } from "./icons";
 import Reveal from "./Reveal";
+import { TESTIMONIALS } from "@/data/testimonials";
 
-const QUOTES = [
-  "I finally know what to say the second they push back.",
-  "I stopped sounding like a telemarketer.",
-  "I booked more this month than the last three combined.",
-  "I got off the PIP — then got promoted to AE.",
-  "I can hear myself getting better on the recordings.",
-];
+const QUOTES = TESTIMONIALS.slice(0, 5);
 
 export default function Outcomes() {
   return (
@@ -29,22 +25,37 @@ export default function Outcomes() {
         </div>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {QUOTES.map((quote, i) => (
+          {QUOTES.map((item, i) => (
             <Reveal
-              key={quote}
+              key={item.quote}
               delay={i * 80}
               className={i === 0 ? "lg:col-span-2" : ""}
             >
-              <blockquote className="h-full rounded-xl border border-basalt-line bg-basalt-raised p-6 transition-colors hover:border-orange/40">
+              <blockquote className="flex h-full flex-col rounded-xl border border-basalt-line bg-basalt-raised p-6 transition-colors hover:border-orange/40">
                 <span className="flex h-9 w-9 items-center justify-center rounded-full bg-basalt text-orange">
                   <IconWaveform className="h-4 w-4" />
                 </span>
                 <p className="mt-4 font-display text-lg leading-snug text-snow">
-                  &ldquo;{quote}&rdquo;
+                  &ldquo;{item.quote}&rdquo;
                 </p>
+                <footer className="mt-4 text-xs font-medium tracking-[0.05em] text-snow-dim">
+                  {item.name} &middot; {item.category}
+                </footer>
               </blockquote>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-10 flex flex-col items-center gap-4 text-center">
+          <p className="text-sm text-snow-dim">
+            Ready to stop guessing and start hearing yourself actually get better?
+          </p>
+          <Link
+            href="/apply"
+            className="rounded-full bg-orange px-8 py-3.5 text-center text-sm font-semibold text-basalt transition-colors hover:bg-orange-dim"
+          >
+            Get Your Calls Torn Down
+          </Link>
         </div>
       </div>
     </section>

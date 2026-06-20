@@ -54,8 +54,8 @@ export default function SneakPeekVideo({
               )}
             </div>
             <div className="mx-auto max-w-sm rounded bg-basalt/70 px-3 py-1.5 text-center text-xs text-snow-dim">
-              &ldquo;Totally fair — a lot of teams feel that way right
-              before they switch.&rdquo;
+              &ldquo;Totally fair — that&apos;s exactly what people say
+              right before they switch vendors.&rdquo;
             </div>
           </div>
 
@@ -73,7 +73,7 @@ export default function SneakPeekVideo({
             </svg>
           </span>
           <span className="relative font-display text-sm font-semibold tracking-[0.15em] text-snow">
-            WATCH THE TEARDOWN
+            WATCH THE DAMAGE
           </span>
         </button>
       </div>

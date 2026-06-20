@@ -6,33 +6,33 @@ export default function Positioning() {
           THE ALTERNATIVE TO COURSES
         </p>
         <h2 className="mt-4 max-w-2xl font-display text-3xl font-bold leading-tight text-snow sm:text-4xl">
-          We don&apos;t sell you scripts. We put you in the film room.
+          I&apos;m not selling you a script. I&apos;m putting you on tape.
         </h2>
         <p className="mt-5 max-w-2xl text-base leading-7 text-snow-dim">
-          You&apos;ve bought the course. You&apos;ve got the framework
-          memorized. The methodology programs, the famous LinkedIn
-          personalities, the bootcamps, the endless free YouTube — all of
-          it is one-to-many and theory-first. None of it has ever once
-          listened to your calls. We do, every single week, and we tell
-          you the truth about what we hear.
+          You bought the course. You&apos;ve got the framework memorized
+          word for word. The methodology gurus, the LinkedIn thought
+          daddies, the bootcamps, the endless free YouTube — all of it is
+          one-to-many, theory-first, and not one of them has ever heard
+          your actual voice on a live call. I do. Every single week. And
+          I&apos;ll tell you exactly what I hear, even when it stings.
         </p>
 
         <blockquote className="mt-10 rounded-2xl border-l-4 border-orange bg-basalt p-8">
           <p className="font-display text-xl leading-snug text-snow sm:text-2xl">
-            For hungry, coachable reps who&apos;ve consumed the theory but
-            still freeze on live calls, Top Mountaineer is the film room
-            for sales — real annotated calls plus weekly 1:1 coaching on
-            your own recordings — unlike the courses and content everyone
-            else sells, which teach you the words but never listen to how
-            you actually sound. We&apos;re not here to motivate you. We&apos;re
-            here to make you dangerous on the phone.
+            For hungry, coachable reps who&apos;ve memorized every framework
+            and still choke the second a prospect pushes back, Top
+            Mountaineer is the film room for sales — real annotated calls
+            plus weekly 1:1 coaching on your own recordings, not someone
+            else&apos;s highlight reel. I&apos;m not here to hype you up.
+            I&apos;m here to make you dangerous on the phone, even if it
+            takes a few uncomfortable Tuesdays.
           </p>
         </blockquote>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           <div className="rounded-xl border border-basalt-line p-6">
             <p className="font-display text-xs font-semibold tracking-[0.15em] text-snow-dim">
-              WE SAY
+              WHAT I SAY
             </p>
             <p className="mt-3 text-base text-snow">
               &ldquo;Here&apos;s the exact line. Here&apos;s why it works.
@@ -42,11 +42,11 @@ export default function Positioning() {
           </div>
           <div className="rounded-xl border border-basalt-line p-6">
             <p className="font-display text-xs font-semibold tracking-[0.15em] text-snow-dim">
-              WE NEVER SAY
+              WHAT I&apos;LL NEVER SAY
             </p>
             <p className="mt-3 text-base text-snow-dim">
               &ldquo;Unlock your sales potential and crush your
-              goals!&rdquo;
+              goals!&rdquo; — said no one with an actual quota, ever.
             </p>
           </div>
         </div>

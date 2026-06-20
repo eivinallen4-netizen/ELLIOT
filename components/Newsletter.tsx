@@ -18,20 +18,20 @@ export default function Newsletter({
 
   return (
     <section id="newsletter" className="border-y border-basalt-line bg-basalt-raised">
-      <div className="mx-auto max-w-3xl px-6 py-20 text-center">
-        <p className="font-display text-sm font-medium tracking-[0.2em] text-orange">
+      <div className="mx-auto max-w-2xl px-6 py-12 text-center">
+        <p className="font-display text-xs font-medium tracking-[0.2em] text-orange">
           {content.eyebrow}
         </p>
-        <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-snow sm:text-4xl">
+        <h2 className="mt-3 font-display text-xl font-bold leading-tight text-snow sm:text-2xl">
           {content.headline}
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-base text-snow-dim">
+        <p className="mx-auto mt-3 max-w-xl text-sm text-snow-dim">
           {content.subhead}
         </p>
 
         <form
           action={formAction}
-          className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row"
+          className="mx-auto mt-6 flex max-w-md flex-col gap-3 sm:flex-row"
         >
           <label htmlFor="newsletter-email" className="sr-only">
             Email address
@@ -59,7 +59,8 @@ export default function Newsletter({
             state.status === "error" ? "text-orange" : "text-snow-dim"
           }`}
         >
-          {state.message || "No spam. Unsubscribe whenever. One real call a week."}
+          {state.message ||
+            "No spam. Unsubscribe whenever, no hard feelings. One real call torn apart, straight to your inbox, every week."}
         </p>
       </div>
     </section>

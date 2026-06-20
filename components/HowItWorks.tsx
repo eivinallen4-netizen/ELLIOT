@@ -3,6 +3,7 @@ import {
   IconPhoneCall,
   IconUpload,
   IconRotate,
+  IconCalendarCheck,
 } from "./icons";
 import Reveal from "./Reveal";
 
@@ -11,25 +12,25 @@ const STEPS = [
     number: "01",
     icon: IconSend,
     title: "Apply",
-    body: "Two minutes. Tell us where you're stuck — ramping, plateaued, on a PIP, whatever it is. No resume required.",
+    body: "Two minutes. Tell me where you're stuck — ramping, plateaued, on a PIP, whatever it is. I don't need your resume, I need your honesty.",
   },
   {
     number: "02",
     icon: IconPhoneCall,
     title: "Get on a 15-minute screen",
-    body: "We check for coachable, not credentialed. If you're a fit, we'll tell you the price and the start date on that same call.",
+    body: "I check for coachable, not credentialed. If you're a fit, you get the price and your start date on that same call — no callback games.",
   },
   {
     number: "03",
     icon: IconUpload,
     title: "Send your first calls",
-    body: "Accepted reps start within a week. Send your real calls in — the good, the bad, all of it.",
+    body: "Accepted reps start within a week. Send me your real calls — the good, the cringe, all of it. I've heard worse.",
   },
   {
     number: "04",
     icon: IconRotate,
     title: "Show up weekly. Repeat.",
-    body: "One film session a week. Do the work between sessions, and the calls start changing fast.",
+    body: "One film session a week. Do the work between sessions and your calls start sounding like a different person, fast.",
   },
 ];
 
@@ -42,43 +43,49 @@ export default function HowItWorks() {
             HOW IT WORKS
           </p>
           <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-snow sm:text-4xl">
-            From application to your first teardown, in under a week.
+            From application to your first gut-check, in under a week.
           </h2>
         </div>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {STEPS.map((step, i) => (
-            <Reveal key={step.number} delay={i * 100}>
-              <div className="group rounded-xl p-1 transition-transform hover:-translate-y-1">
-                <div className="flex items-center justify-between">
-                  <p className="font-display text-4xl font-bold text-basalt-line">
-                    {step.number}
-                  </p>
-                  <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-basalt-line bg-basalt text-orange transition-colors group-hover:border-orange/50">
-                    <step.icon />
+        <div className="relative mt-14">
+          <div className="absolute left-6 right-6 top-6 hidden h-px bg-basalt-line sm:block" />
+          <div className="grid gap-10 sm:grid-cols-4 sm:gap-6">
+            {STEPS.map((step, i) => (
+              <Reveal key={step.number} delay={i * 100}>
+                <span className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full border-2 border-orange bg-basalt-raised font-display text-sm font-bold text-orange">
+                  {step.number}
+                </span>
+                <div className="mt-4 flex items-center gap-2">
+                  <span className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg border border-basalt-line bg-basalt text-orange">
+                    <step.icon className="h-4 w-4" />
                   </span>
+                  <h3 className="font-display text-lg font-semibold text-snow">
+                    {step.title}
+                  </h3>
                 </div>
-                <h3 className="mt-3 font-display text-lg font-semibold text-snow">
-                  {step.title}
-                </h3>
                 <p className="mt-2 text-sm leading-6 text-snow-dim">
                   {step.body}
                 </p>
-              </div>
-            </Reveal>
-          ))}
+              </Reveal>
+            ))}
+          </div>
         </div>
 
-        <div className="mt-12 rounded-2xl border-l-4 border-orange bg-basalt p-8">
-          <p className="font-display text-xs font-semibold tracking-[0.15em] text-snow-dim">
-            THE GUARANTEE
-          </p>
+        <div className="mt-12 rounded-2xl border-l-4 border-orange bg-basalt p-6 sm:p-8">
+          <div className="flex items-center gap-2">
+            <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-orange/15 text-orange">
+              <IconCalendarCheck className="h-4 w-4" />
+            </span>
+            <p className="font-display text-xs font-semibold tracking-[0.15em] text-snow-dim">
+              THE GUARANTEE
+            </p>
+          </div>
           <p className="mt-3 max-w-2xl text-base leading-7 text-snow">
             Show up to every session, send your calls every week, and run
-            the lines we give you. Do that for 30 days and book more
-            meetings — or we keep coaching you until you do, at no extra
-            cost. We can guarantee the work. We can&apos;t guarantee it
-            for reps who ghost the sessions.
+            the lines I give you. Do that for 30 days and book more
+            meetings — or I keep coaching you until you do, free. I can
+            guarantee the work. I can&apos;t guarantee it for reps who
+            ghost the sessions and then wonder why nothing changed.
           </p>
         </div>
       </div>

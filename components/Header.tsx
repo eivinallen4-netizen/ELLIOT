@@ -5,10 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const NAV_LINKS = [
-  { href: "/#for-you", label: "Who It's For" },
+  { href: "/#for-you", label: "Is This You?" },
   { href: "/#method", label: "The Method" },
   { href: "/pricing", label: "What You Get" },
-  { href: "/results", label: "Results" },
+  { href: "/results", label: "Receipts" },
   { href: "/about", label: "About" },
   { href: "/#faq", label: "FAQ" },
   { href: "/free", label: "Free Teardown" },
@@ -17,6 +17,13 @@ const NAV_LINKS = [
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const toggleMenu = (next: boolean) => {
+    setMenuOpen(next);
+    if (typeof document !== "undefined") {
+      document.body.dataset.menuOpen = next ? "true" : "false";
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 border-b border-basalt-line/80 bg-basalt/90 backdrop-blur-md">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
@@ -24,14 +31,14 @@ export default function Header() {
           href="/"
           className="flex items-center"
           aria-label="Top Mountaineer home"
-          onClick={() => setMenuOpen(false)}
+          onClick={() => toggleMenu(false)}
         >
           <Image
             src="/Brand/logos/logo-primary-on-dark.svg"
             alt="Top Mountaineer"
             width={183}
             height={32}
-            preload
+            priority
           />
         </Link>
 
@@ -51,12 +58,12 @@ export default function Header() {
           href="/apply"
           className="hidden rounded-full bg-orange px-5 py-2.5 text-sm font-semibold text-basalt transition-colors hover:bg-orange-dim md:inline-block"
         >
-          Apply for Coaching
+          Get In The Film Room
         </Link>
 
         <button
           type="button"
-          onClick={() => setMenuOpen((open) => !open)}
+          onClick={() => toggleMenu(!menuOpen)}
           aria-label={menuOpen ? "Close menu" : "Open menu"}
           aria-expanded={menuOpen}
           className="flex h-10 w-10 items-center justify-center rounded-lg border border-basalt-line text-snow md:hidden"
@@ -91,7 +98,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              onClick={() => setMenuOpen(false)}
+              onClick={() => toggleMenu(false)}
               className="rounded-lg px-3 py-2.5 text-sm font-medium text-snow-dim transition-colors hover:bg-basalt-raised hover:text-snow"
             >
               {link.label}
@@ -102,7 +109,7 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
             className="mt-2 rounded-full bg-orange px-5 py-3 text-center text-sm font-semibold text-basalt transition-colors hover:bg-orange-dim"
           >
-            Apply for Coaching
+            Get In The Film Room
           </Link>
         </nav>
       </div>

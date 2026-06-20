@@ -11,22 +11,22 @@ const INCLUDES = [
   {
     icon: IconCalendarCheck,
     title: "Weekly 1:1 film session",
-    body: "Your coach reviews your actual calls from that week and tears them down live — not a templated call review off someone else's script.",
+    body: "I review your actual calls from that week and tear them down live — not some templated review off somebody else's script.",
   },
   {
     icon: IconFileText,
     title: "A written breakdown after every session",
-    body: "The exact moments, the why behind them, and the line to run next time — in writing, so you're not relying on memory two days later.",
+    body: "The exact moments, the why behind them, and the line to run next time — in writing, because your memory after a full day on the phones is garbage.",
   },
   {
     icon: IconLayers,
     title: "Access to the full film library",
-    body: "Every tagged objection, recovery, and blown call from the whole cohort. You study more reps than just yourself, every week.",
+    body: "Every tagged objection, save, and blown call from the whole cohort. You study way more reps than just yourself, every single week.",
   },
   {
     icon: IconBookOpen,
     title: "A playbook built from your own calls",
-    body: "Not a generic script. The exact recoveries that work on your prospects, in your voice, pulled straight from your own recordings.",
+    body: "Not a generic script some guru sells in a bundle. The exact recoveries that work on your actual prospects, in your own voice, pulled straight from your own recordings.",
   },
 ];
 
@@ -39,11 +39,12 @@ export default function Offer() {
             WHAT&apos;S IN THE FILM ROOM
           </p>
           <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-snow sm:text-4xl">
-            Here&apos;s exactly what happens every week you&apos;re in.
+            Here&apos;s exactly what happens to you every week you&apos;re in.
           </h2>
           <p className="mt-4 text-base leading-7 text-snow-dim">
             No vague &ldquo;membership.&rdquo; No drip-fed video course
-            gathering dust in a portal. Here&apos;s the whole stack.
+            gathering dust in some portal you forgot the login to.
+            Here&apos;s the whole stack.
           </p>
         </div>
 
@@ -75,17 +76,25 @@ export default function Offer() {
             </p>
             <p className="mt-2 max-w-md text-sm leading-6 text-snow-dim">
               Coaching is application-based, and price depends on your
-              stage and the cohort you&apos;d join. We&apos;ll tell you
-              straight on your screening call — no hidden tiers, no
-              upsell after you&apos;ve already paid.
+              stage and which cohort you&apos;d join. I&apos;ll tell you
+              straight on the 15-minute screening call — no hidden tiers,
+              no surprise upsell after you&apos;ve already paid me.
             </p>
           </div>
-          <Link
-            href="/pricing"
-            className="flex-shrink-0 rounded-full bg-orange px-7 py-3.5 text-center text-sm font-semibold text-basalt transition-colors hover:bg-orange-dim"
-          >
-            See Full Pricing
-          </Link>
+          <div className="flex flex-shrink-0 flex-col gap-3 sm:flex-row">
+            <Link
+              href="/pricing"
+              className="rounded-full border border-basalt-line px-7 py-3.5 text-center text-sm font-semibold text-snow transition-colors hover:border-snow-dim"
+            >
+              See Full Pricing
+            </Link>
+            <Link
+              href="/apply"
+              className="rounded-full bg-orange px-7 py-3.5 text-center text-sm font-semibold text-basalt transition-colors hover:bg-orange-dim"
+            >
+              Get In The Film Room
+            </Link>
+          </div>
         </div>
       </div>
     </section>

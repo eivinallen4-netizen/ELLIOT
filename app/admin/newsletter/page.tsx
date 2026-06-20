@@ -3,6 +3,7 @@ import { getNewsletterContent } from "@/lib/newsletter";
 
 export const metadata = {
   title: "Edit Newsletter — Top Mountaineer",
+  robots: { index: false, follow: false },
 };
 
 export default async function AdminNewsletterPage() {

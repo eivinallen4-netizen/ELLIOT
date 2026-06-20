@@ -42,12 +42,12 @@ export default function Method() {
             THE METHOD
           </p>
           <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-snow sm:text-4xl">
-            Pro athletes don&apos;t get better from a playbook PDF.
+            Pro athletes don&apos;t get good reading a playbook PDF.
           </h2>
           <p className="mt-4 text-base leading-7 text-snow-dim">
-            They get better watching film with a position coach who breaks
-            down what they did and why. Sales has never had that as a
-            standard. We&apos;re building it.
+            They get good watching film with a coach who breaks down
+            exactly what they did and why. Sales never had that as a
+            standard. I&apos;m building it, one rep at a time.
           </p>
         </div>
 

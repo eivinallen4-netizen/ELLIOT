@@ -2,12 +2,7 @@
 
 import { useMemo, useState } from "react";
 import PhotoSlot from "./PhotoSlot";
-
-export type Testimonial = {
-  quote: string;
-  name: string;
-  category: string;
-};
+import type { Testimonial } from "@/data/testimonials";
 
 export default function ResultsGrid({
   testimonials,
@@ -67,7 +62,8 @@ export default function ResultsGrid({
 
       {visible.length === 0 && (
         <p className="mt-8 text-center text-sm text-snow-dim">
-          No results in this category yet.
+          Nothing in this category yet — give it time, or go book the
+          meeting that becomes the next one.
         </p>
       )}
     </div>

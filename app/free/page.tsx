@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileCtaBar from "@/components/MobileCtaBar";
 import SneakPeekVideo from "@/components/SneakPeekVideo";
 import Newsletter from "@/components/Newsletter";
 import { getNewsletterContent } from "@/lib/newsletter";
@@ -9,7 +10,7 @@ import { getNewsletterContent } from "@/lib/newsletter";
 export const metadata: Metadata = {
   title: "Free Teardown — Top Mountaineer",
   description:
-    "One real sales call, torn down for free — the exact moments it went sideways, the why, and the line to use next time. No email required to watch.",
+    "One real sales call, torn apart for free — the exact moments it went sideways, the why, and the line to run next time. No email required, I'm not that guy.",
 };
 
 const MOMENTS = [
@@ -18,7 +19,7 @@ const MOMENTS = [
     said: '"We\'re happy with our current vendor."',
     rep: 'Rep said: "Totally fair — a lot of teams feel that way right before they switch."',
     note:
-      "Agreeing and rolling over kills your own urgency. Acknowledge it, then immediately give a believable reason \"happy\" customers still take calls like this one.",
+      "Agreeing and rolling over kills your own urgency. Acknowledge it, then immediately hand them a believable reason \"happy\" customers still take calls like this one.",
   },
   {
     time: "1:58",
@@ -26,21 +27,21 @@ const MOMENTS = [
     rep:
       'Rep said: "Happy to — what should I actually focus on so it\'s useful instead of going straight to your spam folder?"',
     note:
-      '"Send me info" is a brush-off, not a real ask. Don\'t fight it — make it cost the prospect a real answer instead.',
+      '"Send me info" is a brush-off, not a real request. Don\'t fight it — make it cost them a real answer instead.',
   },
   {
     time: "3:21",
     said: "Prospect goes quiet after hearing the price.",
     rep: "Rep filled the silence after four seconds to defend the number.",
     note:
-      "Silence after pricing is usually processing, not rejection. Whoever fills the dead air first usually loses the frame — let it sit.",
+      "Silence after pricing is usually someone doing math, not rejecting you. Whoever talks first usually loses the frame — let it sit, even when it's uncomfortable.",
   },
   {
     time: "5:10",
     said: '"Can you do a quick demo right now?"',
     rep: "Rep said yes and demoed for 12 minutes before asking a single question.",
     note:
-      "A surprise demo request is a buying signal, not a green light to perform. Two questions first, then demo to the answer — not the whole deck.",
+      "A surprise demo request is a buying signal, not a cue to start tap-dancing. Two questions first, then demo to the answer — not the whole deck.",
   },
 ];
 
@@ -50,19 +51,20 @@ export default async function FreePage() {
   return (
     <div className="flex min-h-screen flex-col bg-basalt font-sans text-snow">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1 pb-24 md:pb-0">
         <section className="border-b border-basalt-line">
           <div className="mx-auto max-w-3xl px-6 py-20 text-center">
             <p className="font-display text-sm font-medium tracking-[0.2em] text-orange">
               FREE FILM SESSION
             </p>
             <h1 className="mt-5 font-display text-4xl font-bold leading-[1.05] text-snow sm:text-5xl">
-              Here&apos;s one real call, torn down for free.
+              Here&apos;s one real call. I tear it apart, for free.
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-snow-dim">
-              No email gate to watch it. No &ldquo;sign up to see the rest.&rdquo;
-              This is the exact kind of breakdown that happens every week in
-              the film room — just on someone else&apos;s call this time.
+              No email gate. No &ldquo;sign up to see the rest.&rdquo; This
+              is the exact kind of breakdown that happens every week in my
+              film room — just on someone else&apos;s call this time, so
+              you can watch instead of squirm.
             </p>
           </div>
         </section>
@@ -110,17 +112,18 @@ export default async function FreePage() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,_rgba(255,107,44,0.12),_transparent_60%)]" />
           <div className="relative mx-auto max-w-2xl px-6 py-20 text-center">
             <h2 className="font-display text-3xl font-bold leading-tight text-snow sm:text-4xl">
-              Want your own calls torn down like this — every week?
+              Want your own calls torn apart like this, every single week?
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-base leading-7 text-snow-dim">
-              This was a free one. The film room does this on your calls,
-              every single week, with a coach who tells you the truth.
+              That one was free. The film room does this to your calls
+              every week, with a coach who&apos;ll actually tell you the
+              truth.
             </p>
             <Link
               href="/apply"
               className="mt-8 inline-block rounded-full bg-orange px-8 py-4 text-sm font-semibold text-basalt transition-colors hover:bg-orange-dim"
             >
-              Apply for Coaching
+              Join the Film Room
             </Link>
           </div>
         </section>
@@ -128,6 +131,7 @@ export default async function FreePage() {
         <Newsletter content={newsletterContent} />
       </main>
       <Footer />
+      <MobileCtaBar />
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import TopoLines from "./TopoLines";
+import { IconTarget, IconPhoneCall } from "./icons";
 
 export default function Hero() {
   return (
@@ -15,59 +16,78 @@ export default function Hero() {
         className="pointer-events-none absolute -right-32 -top-16 opacity-[0.06] sm:-right-16"
       />
 
-      <div className="relative mx-auto grid max-w-6xl gap-12 px-6 py-20 sm:py-28 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
-        <div>
+      <div className="relative mx-auto grid max-w-6xl gap-10 px-6 py-14 sm:py-20 lg:gap-12 lg:py-28 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+        <div className="order-2 lg:order-none">
           <p className="font-display text-sm font-medium tracking-[0.2em] text-orange">
             THE FILM ROOM FOR SALES
           </p>
           <h1 className="mt-5 font-display text-4xl font-bold leading-[1.05] text-snow sm:text-6xl">
-            Hear what closing actually sounds like. Then go sound like that.
+            You don&apos;t have a pitch problem. You have a sounds-like-a-scared-intern problem.
           </h1>
           <p className="mt-6 max-w-lg text-lg leading-8 text-snow-dim">
-            Send us your real calls. A real coach tears them down, line by
-            line, every single week — so you stop guessing what works and
-            start hearing yourself get better, call after call.
+            Send me your real calls. I&apos;ll rip them apart, line by line,
+            every single week — no frameworks, no fluff, just film and the
+            truth about what you actually sound like on the phone.
           </p>
 
-          <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-9 flex flex-col gap-4 sm:flex-row sm:items-center">
             <Link
               href="/apply"
-              className="rounded-full bg-orange px-7 py-3.5 text-center text-sm font-semibold text-basalt transition-colors hover:bg-orange-dim"
+              className="rounded-full bg-orange px-8 py-4 text-center text-base font-semibold text-basalt shadow-lg shadow-orange/20 transition-colors hover:bg-orange-dim"
             >
-              Apply for Coaching
+              Get In The Film Room
             </Link>
             <a
               href="#sneak-peek"
-              className="rounded-full border border-basalt-line px-7 py-3.5 text-center text-sm font-semibold text-snow transition-colors hover:border-snow-dim"
+              className="text-center text-sm font-medium text-snow-dim underline-offset-4 transition-colors hover:text-snow hover:underline"
             >
-              Watch a Real Teardown
+              Watch Me Wreck a Call
             </a>
           </div>
 
+          <p className="mt-4 flex items-center gap-2 text-xs font-medium text-snow-dim">
+            <IconPhoneCall className="h-3.5 w-3.5 flex-shrink-0 text-orange" />
+            Two minutes to apply. I&apos;ll give you the price myself on a 15-minute call — no games.
+          </p>
+
           <p className="mt-6 text-sm text-snow-dim">
-            For coachable SDRs, BDRs, and early AEs who are done guessing
-            what closing sounds like — not for tenured reps or script
-            hunters. We cap every cohort, so apply before the room fills.
+            Built for SDRs, BDRs, and early AEs who actually want to get
+            good — not veterans coasting on muscle memory or script hunters
+            hoping for a magic line. Cohorts are capped. Don&apos;t be the
+            one who applied a week too late.
           </p>
         </div>
 
-        <div className="rounded-2xl border border-basalt-line bg-basalt-raised p-8">
-          <svg viewBox="0 0 32 24" className="h-7 w-9 text-orange/70" aria-hidden>
-            <path
-              fill="currentColor"
-              d="M9.5 0C4.3 2.6 0 7.7 0 13.4 0 18.2 3 21 7 21c3.6 0 6.2-2.8 6.2-6.2 0-3.2-2.3-5.6-5.3-5.6-.5 0-1 .1-1.4.2C7 6 9.3 3.3 12.6 1.6L9.5 0Zm17.8 0c-5.2 2.6-9.5 7.7-9.5 13.4 0 4.8 3 7.6 7 7.6 3.6 0 6.2-2.8 6.2-6.2 0-3.2-2.3-5.6-5.3-5.6-.5 0-1 .1-1.4.2C24.8 6 27.1 3.3 30.4 1.6L27.3 0Z"
-            />
-          </svg>
-          <p className="mt-3 font-display text-lg leading-snug text-snow">
-            &ldquo;I&apos;ve watched all the content. I know the
-            frameworks. But the second someone pushes back on a live
-            call, I still freeze — and nobody&apos;s actually listening to
-            my calls and telling me the truth.&rdquo;
+        <div className="order-1 rounded-2xl border border-basalt-line bg-basalt-raised p-6 sm:p-8 lg:order-none">
+          <div className="flex items-center justify-between">
+            <span className="flex items-center gap-2 rounded-full bg-basalt px-3 py-1 text-[11px] font-semibold tracking-[0.1em] text-snow-dim">
+              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-orange" />
+              LIVE CALL TRANSCRIPT
+            </span>
+            <span className="font-display text-xs text-snow-dim">02:47</span>
+          </div>
+          <div className="mt-3 h-1 w-full overflow-hidden rounded-full bg-basalt">
+            <div className="hero-progress h-full w-full origin-left rounded-full bg-orange/70" />
+          </div>
+
+          <p className="mt-6 font-display text-lg leading-snug text-snow">
+            &ldquo;I&apos;ve watched every video. I know the frameworks
+            cold. Then a prospect pushes back for real and I just...
+            freeze. Nobody&apos;s actually listening to my calls and
+            telling me the truth.&rdquo;
           </p>
+
           <div className="mt-6 h-px bg-basalt-line" />
-          <p className="mt-6 text-sm text-snow-dim">
-            Every rep, before Top Mountaineer.
-          </p>
+
+          <div className="mt-5 flex items-start gap-3 rounded-lg border border-orange/30 bg-basalt px-3 py-2.5">
+            <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-orange/15 text-orange">
+              <IconTarget className="h-3 w-3" />
+            </span>
+            <p className="text-xs leading-5 text-snow-dim">
+              <span className="font-semibold text-orange">COACH NOTE —</span>{" "}
+              Every rep, before I get my hands on them.
+            </p>
+          </div>
         </div>
       </div>
     </section>

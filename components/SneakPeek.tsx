@@ -9,11 +9,12 @@ export default function SneakPeek() {
             SNEAK PEEK
           </p>
           <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-snow sm:text-4xl">
-            Here&apos;s the exact line. Here&apos;s why it works.
+            Watch me drag a rep&apos;s call, kindly. Mostly kindly.
           </h2>
           <p className="mt-4 text-base text-snow-dim">
-            Here&apos;s me blowing it on a real call — so you don&apos;t.
-            This is one breakdown from inside an actual coaching session.
+            Real line, real reason it works, and yes — a real blown moment
+            of my own in there too. This is one straight rip from an actual
+            coaching session, not a highlight reel.
           </p>
         </div>
 

@@ -20,10 +20,10 @@ export async function applyAction(
   const recording = String(formData.get("recording") ?? "").trim();
 
   if (!name) {
-    return { status: "error", message: "Tell us your name." };
+    return { status: "error", message: "Tell me your name. I'm not psychic." };
   }
   if (!EMAIL_RE.test(email)) {
-    return { status: "error", message: "Enter a valid email address." };
+    return { status: "error", message: "Enter a real email address." };
   }
   if (!role) {
     return { status: "error", message: "Pick the option closest to your role." };
@@ -31,11 +31,11 @@ export async function applyAction(
   if (!obstacle || obstacle.length < 10) {
     return {
       status: "error",
-      message: "Give us a real sentence on where you're stuck — that's what we screen on.",
+      message: "Give me a real sentence on where you're stuck — that's literally what I screen on.",
     };
   }
   if (!recording) {
-    return { status: "error", message: "Let us know if you can record your calls." };
+    return { status: "error", message: "Let me know if you can record your calls." };
   }
 
   await addApplication({ name, email, role, obstacle, recording });
@@ -43,6 +43,6 @@ export async function applyAction(
   return {
     status: "success",
     message:
-      "You're in the queue. Watch your inbox — we'll reach out to book your 15-minute screen.",
+      "You're in the queue. Watch your inbox — I'll reach out to book your 15-minute screen.",
   };
 }

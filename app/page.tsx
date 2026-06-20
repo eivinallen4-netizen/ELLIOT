@@ -1,5 +1,7 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import MobileCtaBar from "@/components/MobileCtaBar";
+import TrustStrip from "@/components/TrustStrip";
 import SneakPeek from "@/components/SneakPeek";
 import Positioning from "@/components/Positioning";
 import WhoItsFor from "@/components/WhoItsFor";
@@ -19,8 +21,9 @@ export default async function Home() {
   return (
     <div className="flex min-h-screen flex-col bg-basalt font-sans text-snow">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1 pb-24 md:pb-0">
         <Hero />
+        <TrustStrip />
         <SneakPeek />
         <Positioning />
         <WhoItsFor />
@@ -33,6 +36,7 @@ export default async function Home() {
         <Newsletter content={newsletterContent} />
       </main>
       <Footer />
+      <MobileCtaBar />
     </div>
   );
 }

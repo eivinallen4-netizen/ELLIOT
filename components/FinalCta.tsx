@@ -8,24 +8,25 @@ export default function FinalCta() {
       <TopoLines className="pointer-events-none absolute inset-x-0 bottom-0 h-40 w-full text-orange opacity-[0.08]" />
       <div className="relative mx-auto max-w-3xl px-6 py-24 text-center">
         <h2 className="font-display text-3xl font-bold leading-tight text-snow sm:text-5xl">
-          Book more meetings in 30 days — guaranteed, if you do the work.
+          Book more meetings in 30 days, or I keep coaching you free until you do.
         </h2>
         <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-snow-dim">
           Hear what closing actually sounds like, get your real calls torn
-          down every week, and put a real coach in your corner. We select
-          for coachable — apply and tell us where you&apos;re stuck. Two
-          minutes to apply, one short call to see if you&apos;re a fit.
+          apart every week, and put a coach in your corner who actually
+          wants you to win. I screen for coachable — apply and tell me
+          where you&apos;re stuck. Two minutes to apply, one short call to
+          find out if you&apos;re in.
         </p>
         <Link
           href="/apply"
           className="mt-9 inline-block rounded-full bg-orange px-8 py-4 text-sm font-semibold text-basalt transition-colors hover:bg-orange-dim"
         >
-          Apply for Coaching
+          Get In The Film Room
         </Link>
         <p className="mt-4 text-xs text-snow-dim">
-          We turn away tenured reps, script hunters, and tire-kickers — on
+          I turn away tenured reps, script hunters, and tire-kickers — on
           purpose. Pricing comes after the screen, not before — no
-          surprises.
+          surprise invoices.
         </p>
       </div>
     </section>

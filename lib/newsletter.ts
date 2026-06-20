@@ -18,10 +18,10 @@ const SUBSCRIBERS_PATH = path.join(process.cwd(), "data", "subscribers.json");
 
 const FALLBACK_CONTENT: NewsletterContent = {
   eyebrow: "THE WEEKLY FILM SESSION",
-  headline: "One real call, torn down, in your inbox every week.",
+  headline: "One real call, torn apart, in your inbox every week.",
   subhead:
-    "A real line, a real recovery, a real blown call — annotated with the why. No frameworks, no fluff, just film.",
-  ctaLabel: "Subscribe for free",
+    "A real line, a real save, a real call gone sideways — annotated with the why. No frameworks, no fluff, just film and my notes in the margins.",
+  ctaLabel: "Get the Film, Free",
 };
 
 export async function getNewsletterContent(): Promise<NewsletterContent> {

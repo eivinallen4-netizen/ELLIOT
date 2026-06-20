@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import MobileCtaBar from "@/components/MobileCtaBar";
 import Reveal from "@/components/Reveal";
 import {
   IconCalendarCheck,
@@ -13,29 +14,29 @@ import {
 export const metadata: Metadata = {
   title: "Pricing — Top Mountaineer",
   description:
-    "Coaching is application-based. Here's exactly what's in the film room, how it compares to courses and going it alone, and how pricing works.",
+    "Coaching is application-based. Here's exactly what's in the film room, how it stacks up against courses and going it alone, and how the pricing actually works.",
 };
 
 const INCLUDES = [
   {
     icon: IconCalendarCheck,
     title: "Weekly 1:1 film session",
-    body: "Your coach reviews your actual calls from that week and tears them down live — not a templated call review off someone else's script.",
+    body: "I review your actual calls from that week and tear them down live — not some templated review off somebody else's script.",
   },
   {
     icon: IconFileText,
     title: "A written breakdown after every session",
-    body: "The exact moments, the why behind them, and the line to run next time — in writing, so you're not relying on memory two days later.",
+    body: "The exact moments, the why behind them, and the line to run next time — in writing, because your memory after a full day on the phones is garbage.",
   },
   {
     icon: IconLayers,
     title: "Access to the full film library",
-    body: "Every tagged objection, recovery, and blown call from the whole cohort. You study more reps than just yourself, every week.",
+    body: "Every tagged objection, save, and blown call from the whole cohort. You study way more reps than just yourself, every single week.",
   },
   {
     icon: IconBookOpen,
     title: "A playbook built from your own calls",
-    body: "Not a generic script. The exact recoveries that work on your prospects, in your voice, pulled straight from your own recordings.",
+    body: "Not a generic script some guru sells in a bundle. The exact recoveries that work on your actual prospects, in your own voice, pulled straight from your own recordings.",
   },
 ];
 
@@ -43,12 +44,12 @@ const COMPARISON = [
   {
     name: "The Film Room",
     highlight: true,
-    tagline: "Real calls, real coach, every week",
+    tagline: "Real calls. Real coach. Every single week.",
     points: [
-      "Weekly 1:1 teardown of your own real calls",
+      "Weekly 1:1 teardown of your actual real calls",
       "Personalized recoveries pulled from your voice, your prospects",
       "Annotated library of the whole cohort's calls",
-      "A coach who tells you the truth because they want you to win",
+      "A coach who tells you the truth because I actually want you to win",
     ],
   },
   {
@@ -58,7 +59,7 @@ const COMPARISON = [
     points: [
       "Frameworks and scripts, never your own calls",
       "No one is listening to how you actually sound",
-      "Finish rate on drip-fed video courses: low",
+      "Finish rate on drip-fed video courses: embarrassingly low",
       "You're on your own the second a prospect pushes back",
     ],
   },
@@ -78,15 +79,11 @@ const COMPARISON = [
 const PRICING_FAQS = [
   {
     q: "So what does it actually cost?",
-    a: "It depends on your stage and the cohort you'd join — that's exactly what the 15-minute screening call is for. Apply, get on the call, and we'll tell you straight. No pricing page games, no hidden tiers.",
+    a: "Depends on your stage and which cohort you'd join — that's exactly what the 15-minute call is for. Apply, get on the call, I'll tell you straight. No pricing-page riddles, no hidden tiers.",
   },
   {
     q: "Is there a contract?",
-    a: "Coaching runs in cohorts. You'll know the commitment length and the price before you pay anything — on the screening call, not buried in fine print after.",
-  },
-  {
-    q: "What if it doesn't work?",
-    a: "Show up, send your calls, run the lines we give you for 30 days. If you book more meetings, it worked. If you did the work and it didn't move the needle, we keep coaching you until it does — at no extra cost.",
+    a: "Coaching runs in cohorts. You'll know the commitment length and the price before you pay me a dime — on the 15-minute screening call, not buried in fine print after.",
   },
 ];
 
@@ -94,20 +91,20 @@ export default function PricingPage() {
   return (
     <div className="flex min-h-screen flex-col bg-basalt font-sans text-snow">
       <Header />
-      <main className="flex-1">
+      <main id="main-content" className="flex-1 pb-24 md:pb-0">
         <section className="border-b border-basalt-line">
           <div className="mx-auto max-w-3xl px-6 py-20 text-center">
             <p className="font-display text-sm font-medium tracking-[0.2em] text-orange">
               PRICING
             </p>
             <h1 className="mt-5 font-display text-4xl font-bold leading-[1.05] text-snow sm:text-5xl">
-              Application-based. Told to you straight.
+              Application-based. No pricing-page mystery.
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-snow-dim">
-              No hidden tiers, no upsell after you&apos;ve already paid.
-              Price depends on your stage and the cohort you&apos;d join —
-              we tell you on the screening call, before you commit to
-              anything.
+              No hidden tiers, no upsell after you&apos;ve already paid
+              me. Price depends on your stage and the cohort you&apos;d
+              join — I tell you on the 15-minute screening call, before
+              you commit to a thing.
             </p>
             <Link
               href="/apply"
@@ -115,6 +112,20 @@ export default function PricingPage() {
             >
               Apply &amp; Get Pricing
             </Link>
+            <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-medium tracking-[0.05em] text-snow-dim">
+              <li className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-orange" />
+                NO HIDDEN TIERS
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-orange" />
+                SCREENED, NOT SOLD
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-orange" />
+                PRICE BEFORE YOU PAY
+              </li>
+            </ul>
           </div>
         </section>
 
@@ -125,7 +136,7 @@ export default function PricingPage() {
                 WHAT&apos;S IN THE FILM ROOM
               </p>
               <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-snow sm:text-4xl">
-                Here&apos;s exactly what happens every week you&apos;re in.
+                Here&apos;s exactly what happens to you every week you&apos;re in.
               </h2>
             </div>
 
@@ -161,11 +172,18 @@ export default function PricingPage() {
               <h2 className="mt-4 font-display text-3xl font-bold leading-tight text-snow sm:text-4xl">
                 How it actually compares.
               </h2>
+              <p className="mt-2 text-xs font-medium text-snow-dim sm:hidden">
+                Swipe to compare →
+              </p>
             </div>
 
-            <div className="mt-10 grid gap-6 lg:grid-cols-3">
+            <div className="mt-10 -mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-2 sm:mx-0 sm:grid sm:snap-none sm:gap-6 sm:overflow-visible sm:px-0 lg:grid-cols-3">
               {COMPARISON.map((option, i) => (
-                <Reveal key={option.name} delay={i * 100}>
+                <Reveal
+                  key={option.name}
+                  delay={i * 100}
+                  className="w-[85%] flex-shrink-0 snap-start sm:w-auto"
+                >
                   <div
                     className={`flex h-full flex-col rounded-2xl border p-7 ${
                       option.highlight
@@ -229,24 +247,34 @@ export default function PricingPage() {
                 </details>
               ))}
             </div>
+
+            <p className="mt-6 text-sm text-snow-dim">
+              More questions about the format, the guarantee, or who it&apos;s
+              for?{" "}
+              <Link href="/#faq" className="font-medium text-orange hover:underline">
+                See the full FAQ
+              </Link>
+              .
+            </p>
           </div>
         </section>
 
         <section className="border-b border-basalt-line">
           <div className="mx-auto max-w-2xl px-6 py-20 text-center">
             <h2 className="font-display text-3xl font-bold leading-tight text-snow sm:text-4xl">
-              Apply, get on the screen, get the number.
+              Apply. Get on the screen. Get the number, no games.
             </h2>
             <Link
               href="/apply"
               className="mt-8 inline-block rounded-full bg-orange px-8 py-4 text-sm font-semibold text-basalt transition-colors hover:bg-orange-dim"
             >
-              Apply for Coaching
+              Apply Now
             </Link>
           </div>
         </section>
       </main>
       <Footer />
+      <MobileCtaBar />
     </div>
   );
 }
