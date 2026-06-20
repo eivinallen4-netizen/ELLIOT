@@ -117,7 +117,7 @@ export default async function FreePage() {
               every single week, with a coach who tells you the truth.
             </p>
             <Link
-              href="/#apply"
+              href="/apply"
               className="mt-8 inline-block rounded-full bg-orange px-8 py-4 text-sm font-semibold text-basalt transition-colors hover:bg-orange-dim"
             >
               Apply for Coaching

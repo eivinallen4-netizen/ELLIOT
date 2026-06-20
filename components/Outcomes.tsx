@@ -1,3 +1,6 @@
+import { IconWaveform } from "./icons";
+import Reveal from "./Reveal";
+
 const QUOTES = [
   "I finally know what to say the second they push back.",
   "I stopped sounding like a telemarketer.",
@@ -27,16 +30,20 @@ export default function Outcomes() {
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {QUOTES.map((quote, i) => (
-            <blockquote
+            <Reveal
               key={quote}
-              className={`rounded-xl border border-basalt-line bg-basalt-raised p-6 ${
-                i === 0 ? "lg:col-span-2" : ""
-              }`}
+              delay={i * 80}
+              className={i === 0 ? "lg:col-span-2" : ""}
             >
-              <p className="font-display text-lg leading-snug text-snow">
-                &ldquo;{quote}&rdquo;
-              </p>
-            </blockquote>
+              <blockquote className="h-full rounded-xl border border-basalt-line bg-basalt-raised p-6 transition-colors hover:border-orange/40">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-basalt text-orange">
+                  <IconWaveform className="h-4 w-4" />
+                </span>
+                <p className="mt-4 font-display text-lg leading-snug text-snow">
+                  &ldquo;{quote}&rdquo;
+                </p>
+              </blockquote>
+            </Reveal>
           ))}
         </div>
       </div>

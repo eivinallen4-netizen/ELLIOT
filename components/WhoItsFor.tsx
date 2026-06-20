@@ -1,3 +1,6 @@
+import { IconCircleSlash } from "./icons";
+import Reveal from "./Reveal";
+
 const TRIGGERS = [
   "Just landed your first sales role and it's sink-or-swim with zero real coaching",
   "Ramping and missing quota — scared of a PIP, or already on one",
@@ -35,21 +38,26 @@ export default function WhoItsFor() {
         </div>
 
         <ul className="mt-10 grid gap-4 sm:grid-cols-2">
-          {TRIGGERS.map((trigger) => (
-            <li
+          {TRIGGERS.map((trigger, i) => (
+            <Reveal
               key={trigger}
-              className="flex gap-3 rounded-xl border border-basalt-line bg-basalt-raised p-5"
+              as="li"
+              delay={i * 60}
+              className="flex h-full gap-3 rounded-xl border border-basalt-line bg-basalt-raised p-5 transition-colors hover:border-orange/40"
             >
               <span className="mt-1 h-2 w-2 flex-shrink-0 rounded-full bg-orange" />
               <span className="text-sm leading-6 text-snow">{trigger}</span>
-            </li>
+            </Reveal>
           ))}
         </ul>
 
         <div className="mt-12 rounded-2xl border border-basalt-line bg-basalt p-8">
-          <p className="font-display text-xs font-semibold tracking-[0.15em] text-snow-dim">
-            WHO THIS IS NOT FOR
-          </p>
+          <div className="flex items-center gap-2 text-snow-dim">
+            <IconCircleSlash className="h-4 w-4" />
+            <p className="font-display text-xs font-semibold tracking-[0.15em]">
+              WHO THIS IS NOT FOR
+            </p>
+          </div>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-snow-dim">
             Saying this out loud sharpens everything. We&apos;d rather turn
             these people away on the screening call than dilute the room.

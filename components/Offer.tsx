@@ -1,17 +1,30 @@
+import Link from "next/link";
+import {
+  IconCalendarCheck,
+  IconFileText,
+  IconLayers,
+  IconBookOpen,
+} from "./icons";
+import Reveal from "./Reveal";
+
 const INCLUDES = [
   {
+    icon: IconCalendarCheck,
     title: "Weekly 1:1 film session",
     body: "Your coach reviews your actual calls from that week and tears them down live — not a templated call review off someone else's script.",
   },
   {
+    icon: IconFileText,
     title: "A written breakdown after every session",
     body: "The exact moments, the why behind them, and the line to run next time — in writing, so you're not relying on memory two days later.",
   },
   {
+    icon: IconLayers,
     title: "Access to the full film library",
     body: "Every tagged objection, recovery, and blown call from the whole cohort. You study more reps than just yourself, every week.",
   },
   {
+    icon: IconBookOpen,
     title: "A playbook built from your own calls",
     body: "Not a generic script. The exact recoveries that work on your prospects, in your voice, pulled straight from your own recordings.",
   },
@@ -35,18 +48,23 @@ export default function Offer() {
         </div>
 
         <ul className="mt-10 grid gap-6 sm:grid-cols-2">
-          {INCLUDES.map((item) => (
-            <li
+          {INCLUDES.map((item, i) => (
+            <Reveal
               key={item.title}
-              className="rounded-xl border border-basalt-line bg-basalt-raised p-6"
+              as="li"
+              delay={i * 80}
+              className="rounded-xl border border-basalt-line bg-basalt-raised p-6 transition-colors hover:border-orange/40"
             >
-              <h3 className="font-display text-lg font-semibold text-snow">
+              <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-basalt-line bg-basalt text-orange">
+                <item.icon />
+              </span>
+              <h3 className="mt-4 font-display text-lg font-semibold text-snow">
                 {item.title}
               </h3>
               <p className="mt-2 text-sm leading-6 text-snow-dim">
                 {item.body}
               </p>
-            </li>
+            </Reveal>
           ))}
         </ul>
 
@@ -62,12 +80,12 @@ export default function Offer() {
               upsell after you&apos;ve already paid.
             </p>
           </div>
-          <a
-            href="#apply"
+          <Link
+            href="/pricing"
             className="flex-shrink-0 rounded-full bg-orange px-7 py-3.5 text-center text-sm font-semibold text-basalt transition-colors hover:bg-orange-dim"
           >
-            Apply &amp; Get Pricing
-          </a>
+            See Full Pricing
+          </Link>
         </div>
       </div>
     </section>

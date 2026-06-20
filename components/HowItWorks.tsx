@@ -1,21 +1,33 @@
+import {
+  IconSend,
+  IconPhoneCall,
+  IconUpload,
+  IconRotate,
+} from "./icons";
+import Reveal from "./Reveal";
+
 const STEPS = [
   {
     number: "01",
+    icon: IconSend,
     title: "Apply",
     body: "Two minutes. Tell us where you're stuck — ramping, plateaued, on a PIP, whatever it is. No resume required.",
   },
   {
     number: "02",
+    icon: IconPhoneCall,
     title: "Get on a 15-minute screen",
     body: "We check for coachable, not credentialed. If you're a fit, we'll tell you the price and the start date on that same call.",
   },
   {
     number: "03",
+    icon: IconUpload,
     title: "Send your first calls",
     body: "Accepted reps start within a week. Send your real calls in — the good, the bad, all of it.",
   },
   {
     number: "04",
+    icon: IconRotate,
     title: "Show up weekly. Repeat.",
     body: "One film session a week. Do the work between sessions, and the calls start changing fast.",
   },
@@ -35,18 +47,25 @@ export default function HowItWorks() {
         </div>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {STEPS.map((step) => (
-            <div key={step.number}>
-              <p className="font-display text-4xl font-bold text-basalt-line">
-                {step.number}
-              </p>
-              <h3 className="mt-3 font-display text-lg font-semibold text-snow">
-                {step.title}
-              </h3>
-              <p className="mt-2 text-sm leading-6 text-snow-dim">
-                {step.body}
-              </p>
-            </div>
+          {STEPS.map((step, i) => (
+            <Reveal key={step.number} delay={i * 100}>
+              <div className="group rounded-xl p-1 transition-transform hover:-translate-y-1">
+                <div className="flex items-center justify-between">
+                  <p className="font-display text-4xl font-bold text-basalt-line">
+                    {step.number}
+                  </p>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-basalt-line bg-basalt text-orange transition-colors group-hover:border-orange/50">
+                    <step.icon />
+                  </span>
+                </div>
+                <h3 className="mt-3 font-display text-lg font-semibold text-snow">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-snow-dim">
+                  {step.body}
+                </p>
+              </div>
+            </Reveal>
           ))}
         </div>
 

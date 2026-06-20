@@ -1,8 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
+import TopoLines from "./TopoLines";
 
 export default function Hero() {
   return (
     <section id="top" className="relative overflow-hidden border-b border-basalt-line">
+      <TopoLines className="pointer-events-none absolute inset-x-0 top-0 h-48 w-full text-snow opacity-[0.07]" />
       <Image
         src="/Brand/logos/icon-on-dark.svg"
         alt=""
@@ -27,12 +30,12 @@ export default function Hero() {
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-            <a
-              href="#apply"
+            <Link
+              href="/apply"
               className="rounded-full bg-orange px-7 py-3.5 text-center text-sm font-semibold text-basalt transition-colors hover:bg-orange-dim"
             >
               Apply for Coaching
-            </a>
+            </Link>
             <a
               href="#sneak-peek"
               className="rounded-full border border-basalt-line px-7 py-3.5 text-center text-sm font-semibold text-snow transition-colors hover:border-snow-dim"
@@ -49,7 +52,13 @@ export default function Hero() {
         </div>
 
         <div className="rounded-2xl border border-basalt-line bg-basalt-raised p-8">
-          <p className="font-display text-lg leading-snug text-snow">
+          <svg viewBox="0 0 32 24" className="h-7 w-9 text-orange/70" aria-hidden>
+            <path
+              fill="currentColor"
+              d="M9.5 0C4.3 2.6 0 7.7 0 13.4 0 18.2 3 21 7 21c3.6 0 6.2-2.8 6.2-6.2 0-3.2-2.3-5.6-5.3-5.6-.5 0-1 .1-1.4.2C7 6 9.3 3.3 12.6 1.6L9.5 0Zm17.8 0c-5.2 2.6-9.5 7.7-9.5 13.4 0 4.8 3 7.6 7 7.6 3.6 0 6.2-2.8 6.2-6.2 0-3.2-2.3-5.6-5.3-5.6-.5 0-1 .1-1.4.2C24.8 6 27.1 3.3 30.4 1.6L27.3 0Z"
+            />
+          </svg>
+          <p className="mt-3 font-display text-lg leading-snug text-snow">
             &ldquo;I&apos;ve watched all the content. I know the
             frameworks. But the second someone pushes back on a live
             call, I still freeze — and nobody&apos;s actually listening to

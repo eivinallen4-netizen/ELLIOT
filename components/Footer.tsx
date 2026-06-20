@@ -1,9 +1,12 @@
 import Image from "next/image";
+import { IconLinkedIn, IconTikTok, IconX } from "./icons";
 
 const LINKS = [
   { href: "/#for-you", label: "Who It's For" },
   { href: "/#method", label: "The Method" },
-  { href: "/#pricing", label: "What You Get" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "/results", label: "Results" },
+  { href: "/about", label: "About" },
   { href: "/#faq", label: "FAQ" },
   { href: "/free", label: "Free Teardown" },
 ];
@@ -31,15 +34,27 @@ export default function Footer() {
           ))}
         </nav>
 
-        <div className="flex gap-5 text-sm text-snow-dim">
-          <a href="#" className="hover:text-snow">
-            LinkedIn
+        <div className="flex gap-4">
+          <a
+            href="#"
+            aria-label="Top Mountaineer on LinkedIn"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-basalt-line text-snow-dim transition-colors hover:border-snow-dim hover:text-snow"
+          >
+            <IconLinkedIn className="h-4 w-4" />
           </a>
-          <a href="#" className="hover:text-snow">
-            TikTok
+          <a
+            href="#"
+            aria-label="Top Mountaineer on TikTok"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-basalt-line text-snow-dim transition-colors hover:border-snow-dim hover:text-snow"
+          >
+            <IconTikTok className="h-4 w-4" />
           </a>
-          <a href="#" className="hover:text-snow">
-            X
+          <a
+            href="#"
+            aria-label="Top Mountaineer on X"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-basalt-line text-snow-dim transition-colors hover:border-snow-dim hover:text-snow"
+          >
+            <IconX className="h-4 w-4" />
           </a>
         </div>
       </div>

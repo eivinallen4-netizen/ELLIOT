@@ -1,21 +1,33 @@
+import {
+  IconUpload,
+  IconTarget,
+  IconLayers,
+  IconCompass,
+} from "./icons";
+import Reveal from "./Reveal";
+
 const STEPS = [
   {
     number: "01",
+    icon: IconUpload,
     title: "Send your real calls",
     body: "Every week, your live calls go into the film room — the good, the bad, and the ones you'd rather forget.",
   },
   {
     number: "02",
+    icon: IconTarget,
     title: "Get torn down, 1:1",
     body: "A real coach reviews your recordings and breaks down what you did, why it worked or didn't, and the exact line to use next time.",
   },
   {
     number: "03",
+    icon: IconLayers,
     title: "Build the habit of studying film",
     body: "Every objection, every recovery, every blown call gets tagged with the why — building the largest annotated library of real sales calls as you go.",
   },
   {
     number: "04",
+    icon: IconCompass,
     title: "Show up next week dangerous",
     body: "You don't just fix last week's call — you walk into your next one already knowing the line, the recovery, and the close before the prospect says a word.",
   },
@@ -40,18 +52,25 @@ export default function Method() {
         </div>
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {STEPS.map((step) => (
-            <div key={step.number}>
-              <p className="font-display text-4xl font-bold text-basalt-line">
-                {step.number}
-              </p>
-              <h3 className="mt-3 font-display text-lg font-semibold text-snow">
-                {step.title}
-              </h3>
-              <p className="mt-2 text-sm leading-6 text-snow-dim">
-                {step.body}
-              </p>
-            </div>
+          {STEPS.map((step, i) => (
+            <Reveal key={step.number} delay={i * 100}>
+              <div className="group rounded-xl p-1 transition-transform hover:-translate-y-1">
+                <div className="flex items-center justify-between">
+                  <p className="font-display text-4xl font-bold text-basalt-line">
+                    {step.number}
+                  </p>
+                  <span className="flex h-10 w-10 items-center justify-center rounded-lg border border-basalt-line bg-basalt text-orange transition-colors group-hover:border-orange/50">
+                    <step.icon />
+                  </span>
+                </div>
+                <h3 className="mt-3 font-display text-lg font-semibold text-snow">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-snow-dim">
+                  {step.body}
+                </p>
+              </div>
+            </Reveal>
           ))}
         </div>
       </div>
