@@ -9,7 +9,8 @@ export default function FinalCta() {
         <p className="mx-auto mt-5 max-w-xl text-base leading-7 text-snow-dim">
           Hear what closing actually sounds like, get your real calls torn
           down every week, and put a real coach in your corner. We select
-          for coachable — apply and tell us where you&apos;re stuck.
+          for coachable — apply and tell us where you&apos;re stuck. Two
+          minutes to apply, one short call to see if you&apos;re a fit.
         </p>
         <a
           href="mailto:coach@topmountaineer.com?subject=Coaching%20Application"
@@ -19,7 +20,8 @@ export default function FinalCta() {
         </a>
         <p className="mt-4 text-xs text-snow-dim">
           We turn away tenured reps, script hunters, and tire-kickers — on
-          purpose.
+          purpose. Pricing comes after the screen, not before — no
+          surprises.
         </p>
       </div>
     </section>

@@ -1,10 +1,11 @@
 import Image from "next/image";
 
 const LINKS = [
-  { href: "#for-you", label: "Who It's For" },
-  { href: "#method", label: "The Method" },
-  { href: "#results", label: "Results" },
-  { href: "#newsletter", label: "Newsletter" },
+  { href: "/#for-you", label: "Who It's For" },
+  { href: "/#method", label: "The Method" },
+  { href: "/#pricing", label: "What You Get" },
+  { href: "/#faq", label: "FAQ" },
+  { href: "/free", label: "Free Teardown" },
 ];
 
 export default function Footer() {
@@ -43,8 +44,8 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-basalt-line px-6 py-6 text-center text-xs text-snow-dim">
-        © {new Date().getFullYear()} Top Mountaineer. Put real calls and a
-        real coach in front of every rep willing to do the work.
+        © {new Date().getFullYear()} Top Mountaineer. We don&apos;t sell
+        scripts — we put a real coach on your real calls, every week.
       </div>
     </footer>
   );

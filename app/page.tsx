@@ -3,8 +3,11 @@ import Hero from "@/components/Hero";
 import SneakPeek from "@/components/SneakPeek";
 import Positioning from "@/components/Positioning";
 import WhoItsFor from "@/components/WhoItsFor";
-import Outcomes from "@/components/Outcomes";
 import Method from "@/components/Method";
+import Offer from "@/components/Offer";
+import HowItWorks from "@/components/HowItWorks";
+import Outcomes from "@/components/Outcomes";
+import FAQ from "@/components/FAQ";
 import FinalCta from "@/components/FinalCta";
 import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
@@ -22,7 +25,10 @@ export default async function Home() {
         <Positioning />
         <WhoItsFor />
         <Method />
+        <Offer />
+        <HowItWorks />
         <Outcomes />
+        <FAQ />
         <FinalCta />
         <Newsletter content={newsletterContent} />
       </main>

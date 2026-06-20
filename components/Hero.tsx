@@ -18,12 +18,12 @@ export default function Hero() {
             THE FILM ROOM FOR SALES
           </p>
           <h1 className="mt-5 font-display text-4xl font-bold leading-[1.05] text-snow sm:text-6xl">
-            Hear what closing actually sounds like.
+            Hear what closing actually sounds like. Then go sound like that.
           </h1>
           <p className="mt-6 max-w-lg text-lg leading-8 text-snow-dim">
-            Real calls. Real feedback. A real coach in your corner every
-            single week — so you stop guessing and start hearing yourself
-            get better.
+            Send us your real calls. A real coach tears them down, line by
+            line, every single week — so you stop guessing what works and
+            start hearing yourself get better, call after call.
           </p>
 
           <div className="mt-9 flex flex-col gap-4 sm:flex-row">
@@ -43,7 +43,8 @@ export default function Hero() {
 
           <p className="mt-6 text-sm text-snow-dim">
             For coachable SDRs, BDRs, and early AEs who are done guessing
-            what closing sounds like.
+            what closing sounds like — not for tenured reps or script
+            hunters. We cap every cohort, so apply before the room fills.
           </p>
         </div>
 

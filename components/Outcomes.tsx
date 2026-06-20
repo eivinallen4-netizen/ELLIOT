@@ -18,6 +18,11 @@ export default function Outcomes() {
             Not &ldquo;learn the framework.&rdquo; Freeze-on-the-phone to
             dangerous-on-the-phone.
           </h2>
+          <p className="mt-4 text-base leading-7 text-snow-dim">
+            These aren&apos;t testimonials some agency wrote for us. They&apos;re
+            what reps say in the film room, the week after the call that
+            used to make them freeze.
+          </p>
         </div>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

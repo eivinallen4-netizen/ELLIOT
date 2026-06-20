@@ -9,9 +9,12 @@ export default function Positioning() {
           We don&apos;t sell you scripts. We put you in the film room.
         </h2>
         <p className="mt-5 max-w-2xl text-base leading-7 text-snow-dim">
-          The methodology programs, the famous LinkedIn personalities, the
-          bootcamps, the endless free YouTube — all of it is one-to-many
-          and theory-first. None of it listens to your calls. We do.
+          You&apos;ve bought the course. You&apos;ve got the framework
+          memorized. The methodology programs, the famous LinkedIn
+          personalities, the bootcamps, the endless free YouTube — all of
+          it is one-to-many and theory-first. None of it has ever once
+          listened to your calls. We do, every single week, and we tell
+          you the truth about what we hear.
         </p>
 
         <blockquote className="mt-10 rounded-2xl border-l-4 border-orange bg-basalt p-8">
@@ -21,7 +24,8 @@ export default function Positioning() {
             for sales — real annotated calls plus weekly 1:1 coaching on
             your own recordings — unlike the courses and content everyone
             else sells, which teach you the words but never listen to how
-            you actually sound.
+            you actually sound. We&apos;re not here to motivate you. We&apos;re
+            here to make you dangerous on the phone.
           </p>
         </blockquote>
 

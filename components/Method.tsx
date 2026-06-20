@@ -14,6 +14,11 @@ const STEPS = [
     title: "Build the habit of studying film",
     body: "Every objection, every recovery, every blown call gets tagged with the why — building the largest annotated library of real sales calls as you go.",
   },
+  {
+    number: "04",
+    title: "Show up next week dangerous",
+    body: "You don't just fix last week's call — you walk into your next one already knowing the line, the recovery, and the close before the prospect says a word.",
+  },
 ];
 
 export default function Method() {
@@ -34,7 +39,7 @@ export default function Method() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-3">
+        <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {STEPS.map((step) => (
             <div key={step.number}>
               <p className="font-display text-4xl font-bold text-basalt-line">

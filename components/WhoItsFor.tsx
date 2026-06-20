@@ -29,7 +29,8 @@ export default function WhoItsFor() {
             Early-to-mid-career phone and video outbound reps — SDRs,
             BDRs, and SMB/early AEs, roughly years 0–4. Commission-motivated,
             competitive, and coachable. That last one isn&apos;t a hope —
-            it&apos;s a qualification.
+            it&apos;s a qualification we screen for before you ever get a
+            seat in the room.
           </p>
         </div>
 
@@ -51,7 +52,7 @@ export default function WhoItsFor() {
           </p>
           <p className="mt-3 max-w-2xl text-sm leading-6 text-snow-dim">
             Saying this out loud sharpens everything. We&apos;d rather turn
-            these people away than dilute the room.
+            these people away on the screening call than dilute the room.
           </p>
           <ul className="mt-5 flex flex-col gap-2 sm:flex-row sm:gap-8">
             {NOT_FOR.map((item) => (
